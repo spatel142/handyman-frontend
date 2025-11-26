@@ -65,7 +65,7 @@ export default function BookingForm({ services, apiBase }){
                 </select>
                 </div>
                  <div className="mb-3">
-                <input name="date" value={form.date} className="form-control" onChange={handle} placeholder="date" />
+                <input name="date" type="date" value={form.date} className="form-control" onChange={handle} placeholder="date" />
                  </div>
                  <div className="mb-3">
                 <input name="address" value={form.address} className="form-control" onChange={handle} placeholder="Address" />
