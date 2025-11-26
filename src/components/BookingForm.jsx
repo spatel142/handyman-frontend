@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-
+const API = import.meta.env.VITE_API_BASE ;
 export default function BookingForm({ services, apiBase }){
     const [form, setForm] = useState({
         name: '',
@@ -24,7 +24,7 @@ export default function BookingForm({ services, apiBase }){
         e.preventDefault();
         setStatus('sending...');
         try{
-            const res = await fetch('http://localhost:4000/api/bookings',{
+            const res = await fetch(`${API}/api/bookings`,{
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify(form)
