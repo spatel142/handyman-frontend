@@ -13,13 +13,13 @@ import BusinessCard from './components/BusinessCard'
 
 
 
-const API = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
+const API = import.meta.env.VITE_API_BASE ;
 
 function App() {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-      fetch('http://localhost:4000/api/services')
+      fetch('API/api/services')
       .then(r => r.json())
       .then(setServices)
       .catch(console.error);
