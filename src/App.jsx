@@ -19,7 +19,7 @@ function App() {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-      fetch('API/api/services')
+      fetch(`${API}/api/services`)
       .then(r => r.json())
       .then(setServices)
       .catch(console.error);
